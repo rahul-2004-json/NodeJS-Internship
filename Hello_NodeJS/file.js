@@ -14,7 +14,6 @@ const fs = require("fs");
 //     console.log("File has been written successfully!");
 // })
 
-
 //How to read a file synchronously
 //This returns the result which can be stored in a variable and then printed.
 // const content = fs.readFileSync("hello2.txt","utf-8");
@@ -30,14 +29,13 @@ const fs = require("fs");
 //     }
 // })
 
-
 //How to append content at the end of the file
-fs.appendFileSync("hello.txt","\nThis is my Kingdom");
+fs.appendFileSync("hello.txt", "\nThis is my Kingdom");
 
 // fs.cpSync("hello.txt","copied.txt");
 
-// How to delete file 
+// How to delete file
 // fs.unlinkSync("copied.txt");
 
-//How to make directory 
-fs.mkdirSync("my-docs/a/b",{recursive:true}); //recursive:true is used to create nested directories
+//How to make directory
+fs.mkdirSync("my-docs/a/b", { recursive: true }); //recursive:true is used to create nested directories
