@@ -1,14 +1,14 @@
 {
-  "name": "httpserver",
+  "name": "express_nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "url": "^0.11.3"
+    "express": "^4.19.2"
   }
 }
