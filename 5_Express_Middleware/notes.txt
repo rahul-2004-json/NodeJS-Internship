@@ -1,0 +1,10 @@
+-Middleware is just a function that runs on every req and res
+-a Middleware is like a middleman in between the server and client
+-It can either send the req ahead to server and return response aur it can authenticate the user for any threat and cancel the request
+-A route can have multiple middlewares and a middleware can have access to other middlewares also
+
+
+-A middleware can do the following things
+End our req res cycle
+call next middleware
+change our req and res objects

@@ -1,0 +1,4 @@
+1720266724177: GET : [object Object]
+1720266785643: POST : /api/users
+1720266802233: DELETE : /api/users/23
+1720266820964: GET : /api/users

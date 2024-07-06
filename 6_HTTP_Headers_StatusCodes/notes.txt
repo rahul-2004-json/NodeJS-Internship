@@ -1,0 +1,16 @@
+Headers are basically additional information about our Request and response
+Headers can be remembered by the example of Mail being sent from one person to another
+Outside mail we can have address or persons name written on it as additional information to know where this mail should be given
+Inside the mail we have data that needs to be send 
+
+
+
+
+//Http status codes indicates wheteher a response has been successfully completed or not
+
+Informational Responses : 100 -199
+successfull Responses : 200 -299
+Redirection messages : 300 - 399
+Client error responses : 400 - 499
+server error responses : 500 - 599
+

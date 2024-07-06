@@ -1,0 +1,21 @@
+MongoDB works on BSON file format BSON(Binary Javascript Object Notation)
+Best for Node Applications
+
+As in sql we have tables
+In MongoDB we have collections
+
+
+
+//Some MongoDB Commands
+show dbs
+use<db_name>
+show collections
+db.coll.find()
+db.coll.insert()
+
+
+
+//How Mongoose works
+In Mongoose we create a Schema - This basically defines a structure 
+    we use this schema to make model 
+    Using this model we do CRUD Operations
