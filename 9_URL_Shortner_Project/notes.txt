@@ -1,0 +1,6 @@
+How to start making backend for a project
+1.Initialize Basic setup in index.js file.
+2.Create a schema of specific entity to work on and then create its model.
+3.Connect your node js with database in a Connection.js file , don't worry if database name doesn't show up in mongodb ,once data is entered it will be created automatically.
+4.Create routes to handle endpoints -> then for each end points create controllers to handle them separately..
+5.controllers should be able to manipulate the model.

@@ -1,0 +1,9 @@
+Model View Controller
+
+Controller manipulates the model and model updates the view
+This structure is usefull when we have lots of schema and models to be handled and those cannot be written only in single file as it may make code crowded
+This will allow use to keep the different sections of code in separate files
+
+
+Note the Sequence of Execution in MVC model is 
+user calls -> route calls -> Controllers then manipulates the model
