@@ -25,3 +25,8 @@ Statefull : can be understood by example of a Valet parking and the ticket it gi
 
 
 //Main flaw in this code is that wheneverwe refresh or restart the server the uid gets erased
+
+
+
+In this folder we have done Statefull Authentications
+AND jwt tokens are for Stateless authentications
