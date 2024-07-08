@@ -1,0 +1,27 @@
+Authentications 
+
+Authentications Patterns are of two types
+Statefull              Stateless
+
+
+Statefull : Which maintains state or data or server side 
+Stateless : Which does not have any state
+
+
+
+Statefull : can be understood by example of a Valet parking and the ticket it gives to us that maps our car with that ticket and valet writes the unique number in its record.
+
+//How statefull example works between client and server
+1.client requests to login with username and password to server
+2.Server then provides us session uid just like parking boy gave us ticket / server keeps track of this id associated to our name
+3.Now next time whenever client tries to access the endpoints , session id will get associated with it and server will authenticate permissions based on that and return the response.
+4.How uids can be transfered to the client
+ - cookies  // used more in browser
+ - response
+ - headers  //used more in rest api
+
+
+//For Authentications purpose separate routes will be created in routes folder
+
+
+//Main flaw in this code is that wheneverwe refresh or restart the server the uid gets erased

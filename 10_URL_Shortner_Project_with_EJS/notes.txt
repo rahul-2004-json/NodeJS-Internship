@@ -1,0 +1,16 @@
+EJS is used to make server side rendering more easy
+In this Project we will be using the views folder that will be used for server side rendering
+
+Ejs files are just normal html files that are made in views folder
+
+This views folder makes our code more clean by separating the html code that needs to be rendered
+
+
+
+
+
+In home.ejs file we can access the values passed like this
+ <!-- The urls is coming from the index.js file where we are passing these values -->
+ <% urls.forEach(url => { %>
+    <li><%= url.shortId %></li>
+ <% }) %>

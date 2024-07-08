@@ -1,0 +1,32 @@
+Problems in Statefull Authentication
+-Once server restarts or refreshes , the state is lost
+-It is also memory intensive , as it uses memory of the server
+
+
+Above problem is solved by Stateless Authentication
+-There is no state in backend
+-Whatever token we will create we will keep the data in it and lock it , so everyone can read it but they cannot change it.
+
+
+
+JWT Tokens
+It's a compact, URL-safe way to represent claims between two parties.
+A JWT is essentially a string that contains three parts: a header, a payload, and a signature, all encoded in Base64.
+
+Parts of a JWT
+Header: Contains metadata about the token, such as the type of token (JWT) and the signing algorithm being used.
+Payload: Contains the claims, which are statements about an entity (typically, the user) and additional data. This part is typically a JSON object.
+Signature: Used to verify the authenticity of the token. It ensures that the token hasn't been altered after it was issued.
+
+
+Note: We are using JSON web token to store the actual data
+//Most important thing is secret 
+
+//Main thing in JSON web token is that nothing is being stored in state of server ,the tokens are stored in form of cookie in local browser of client and whenever we want to verify it 
+we verify it by secret key. Thus even on reloading the server we remain logged in.
+
+//Whatever tokens we are generating that have authenticity only when they are made with secret key
+//Whenever we want to verify any token we can use the secret key to verify it
+//for eg: Verifying a student with its id card that has authenticity of his schools governing body , anyone with fake id card would be caught
+
+
