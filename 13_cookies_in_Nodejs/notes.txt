@@ -1,0 +1,36 @@
+//Why using Database is bad for Authentication
+//Database usage is bad for authentication because there are problems in two folds
+1.Authentication done using database increases latency as both the client and server runs on two different ports
+2.Every read and write operations or any operations on database costs money which can overall increase the bill of the company
+
+
+//Benefit of JWT Tokens 
+1.It is stored in local storage area and no cost is involved and moreover it is secure as no one can change it
+
+
+
+---One way to store tokens is using cookie----
+//How cookies and JWT Work 
+1.Client gives us the email and password
+2.Server validates the information and creates a JWT token with payload information that will be authenticated by JWT token and secret key.
+3.This JWT token is stored in form of cookie in the browser of client.
+4.Now whenever the client will access the server it will now check for cookie present in browser of client, if there is any cookie with uuid created by server then the client will be logged in and if cookie is not present then it will be logged out.
+Note: Browser automatically sends the cookie whenever there is a request
+
+
+Important Note related to cookies
+1.Cookies are domain specific for eg:
+-Facebook creates 2 cookies when user login and instagram creates 2 cookies when user logs in
+-Now when I visit Facebook only the 2 cookies of facebook that were created will be sent , cookies of instagram will not be sent.
+-If instagram gets the cookies of Facebook then it will get the access of facebook, hence to stop this from happening cookies are domain specific.
+
+2.Cookies also have expiration date.
+3.Cookies are limited to browsers only
+
+
+
+
+//Tokens in headers are given as JSON Response
+--- Another way to store tokens is using responses ---
+We will return the token as response to the client
+and Whenever the client will access the route , it should come with a header :{ Authorization : "Bearer <token>"}

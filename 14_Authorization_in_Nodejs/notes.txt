@@ -1,0 +1,4 @@
+Authentications and Authorizations
+
+Authentication : Meaning logging the user into application by verifying that user belongs to the application
+Authorization : Means whether you are authorized to access a particular resource.
