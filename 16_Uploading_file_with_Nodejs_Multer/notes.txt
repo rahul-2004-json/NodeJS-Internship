@@ -1,0 +1,4 @@
+For uploading the files we use Multer present in the node js
+
+Multer is a middleware used to handle multipart/form-data for uploading files
+processes only multipart/form-data
