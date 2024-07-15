@@ -46,7 +46,6 @@ app.get("/", (req, res) => {
 app.post("/upload", upload.single("profileImage"), (req, res) => {
   console.log(req.body); //this will be null as there is no text field
   console.log(req.file); //this will return the file information
-
   return res.redirect("/");
 });
 

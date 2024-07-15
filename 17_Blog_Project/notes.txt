@@ -1,0 +1,16 @@
+In package.json we have some dependencies like this
+"devDependencies": {
+    "nodemon": "^3.1.4"
+}
+These are dev dependencies that will not be uploaded during the time of production and is used only at development phase
+
+
+"scripts": {
+    "start": "node index.js",   //This is start script for production level that will run only once
+    "dev": "nodemon index.js"   //This is start script for development level
+}
+
+
+
+:::::::::::Note::::::::::::::::::::::
+For password hashing we will be using salt and pepper approach
