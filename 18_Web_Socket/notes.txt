@@ -1,0 +1,28 @@
+Traditional Client Server Model was working as below
+-Client requests from server , sever responds to client and the connection closes.
+-One major drawback of this was that a client had to invoke the server through request and then server responds and connection closes
+if the server wanted to send something to the client then there is no way to send it.
+
+
+Polling : Polling, in the context of computer science and networking, is a technique where a client repeatedly requests data from a server at regular intervals. 
+This is typically used to keep the client updated with the latest information
+-Simpler to implement but can be less efficient and slower due to constant requests and potential delays between polling intervals.
+
+:::::: Solution for above problem in polling is websockets ::::::::
+
+Websockets: it is just a full duplex bidirectional protocol
+full duplex means A to B and B to A both side it can work.
+In Websockets the connection between the client and server never closes until we want it to close.
+-A client can request as many times as it wants and a server can send responses as many times it wants.
+
+
+Upgrade header in HTTP
+This header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). 
+For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
+
+
+
+Socket.io
+It is composed of two parts 
+1.A server that integrates with NodeJS http server 
+2.A client library that loads on the browser side

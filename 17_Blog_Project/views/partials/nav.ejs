@@ -18,10 +18,11 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        <% if (locals.user) { %>
         <li class="nav-item">
-          <a class="nav-link" href="#">Create Blog</a>
+          <a class="nav-link" href="/blog/addblog">Create Blog</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -31,13 +32,29 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Rahul Yadav
+            <%= locals.user.fullname %>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Log out</a></li>
+            <li><a class="dropdown-item" href="/user/signout">Sign out</a></li>
           </ul>
         </li>
+        <% } else {%>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/user/signup">Create Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/user/signin">Sign in</a>
+          </li>
+        </ul>
+        <%}%>
       </ul>
     </div>
   </div>
 </nav>
+
+<% if (locals.error) { %>
+<div class="container mt-4">
+  <div class="alert alert-danger" role="alert">Incorrect password or email</div>
+</div>
+<% } %>

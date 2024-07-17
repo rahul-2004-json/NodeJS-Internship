@@ -12,5 +12,26 @@ These are dev dependencies that will not be uploaded during the time of producti
 
 
 
-:::::::::::Note::::::::::::::::::::::
-For password hashing we will be using salt and pepper approach
+:::::::::::::::Note::::::::::::::::::::::
+1.For password hashing we will be using salt and pepper approach
+2.In views folder we have something as partials , these partials are like components in application that will remain everywhere
+3.EJS provides us a locals object that helps store all the variables. that can be used while server side rendering.
+4. .env are dynamic variables these are usefull when we deploy our code.
+
+
+//Very important whenever creating form type data in ejs or frontend always add the name attributes to it
+//Also add actions and method on the form so that routes can process on it
+
+
+Flow of Project 
+1.Initial setup in Index.js file
+2.Define the schemas for the object inside your project and making models from it and exporting it
+3.Creating routes and their controllers in same file or in separate files.
+Inside routes only we interact with models using controllers
+4.Add JWT authentication using Tokens inside the sigin route , this creates a token and stores it in form of cookie once user logins
+5.Create a middleware that checks token for each and every request and response ... for this we require cookie parser
+6.Connect the middleware for authentication in index.js file using cookie parser and push the updated request body in get routes of index.js file
+7.For creating the logout functionality we just delete the cookie when user clicks on logout button.
+8.Create new Schema for blog post 
+9.Create a ejs file for the blog to be added in the views folder.
+
