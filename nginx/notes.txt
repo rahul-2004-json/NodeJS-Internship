@@ -1,0 +1,60 @@
+What is Nginx ?  Most popular reverse proxy server
+-Powerful webserver that is non threaded 
+-Event driven architecture
+
+Advantages of NGINX:
+-Can handle 10,000 concurrent request
+-acts as reverse proxy
+-act as load balancer --- can decide which server to allocated
+-act as api gateway
+-Handle SSL certificates. (SSL : Secure Sockets Layer )  An SSL certificate is a digital certificate that authenticates a website's identity and enables an encrypted connection.
+
+
+Forward Proxy : Multiple clients access the server through VPN server
+-In forward proxy server is unknown to which user it is connected to.
+Reverse Proxy : It is opposite of forward proxy , single client access multiple server through VPN server.
+-In reverse proxy client is unknown to which server it is going to be connected.
+
+-The intermediate VPN here is usually NGINX
+-In real world development we usually do not interact directly with the server but Nginx is used as intermediator.
+
+
+Google also uses reverse proxy 
+-When we access the www.google.com/maps this is handled by different server allocated for handeling this particular server
+-When we access the www.google.com/youtube it will be reverse proxy to a different server.
+
+
+
+-Prequisites for using NGINX
+-Docker : Docker has something as container which is a lightweight virtual machine
+-Ubuntu
+-aws
+
+
+-By Default Nginx runs on port 80
+-Main file in Nginx is nginx.conf where we write reverse proxy code
+
+
+
+-Role of a webserver
+-Serve the static files like images , html js codes etc
+
+
+-How to reload Nginx
+nginx -s reload
+nginx -t
+
+
+
+
+
+
+------------GRAPHQL---------
+GraphQL
+How is GraphQL different from RESTAPI
+
+-In RestAPI we need to visit different routes or endpoints in order 
+to reach to our data and get what we want , with that data we also get the things that are not necessarly needed.
+
+-GraphQL comes into picture at this moment where it works on 
+the basis of query. Here we query what we actually want and get the exact data nothing less nothing more.
